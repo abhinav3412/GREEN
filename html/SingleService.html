@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>GREEN HORIZON- Empowering Responsible Waste Management, Let's Make a Difference</title>
+  <meta name="keywords" content="GREEN HORIZON - Empowering Responsible Waste Management, Let's Make a Difference">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicons  -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.svg">
+  <!-- framework of css -->
+  <link rel="stylesheet" href="assets/css/bootstrap-lib/bootstrap.min.css">
+  <!-- style sheet of css -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- responsive sheet of css -->
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- font awesome icon link  -->
+  <link rel="stylesheet" href="assets/font-awesonw-lib/icon/all.min.css">
+  <!-- slick-slider link css -->
+  <link rel="stylesheet" href="assets/css/slick.min.css">
+  <!-- animation of css -->
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div class="OtherPages_bg">
+      <!-- 1.1. header section -->
+      <header>
+        <nav class="navbar">
+          <div class="logo">GREEN HORIZON</div>
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="" id="nav-dashboard">Dashboard</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Service.html">Our Services</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+          </ul>
+          <div class="menu-toggle" id="mobile-menu">
+              <i class="fas fa-bars"></i>
+          </div>
+   <!-- Mini Popup Modal for Dashboard -->
+<div class="mini-popup" id="mini-popup">
+<div class="mini-popup-content">
+<span class="close-btn">&times;</span>
+<h3>User Dashboard</h3>
+<div class="user-info">
+    <p><strong>Name:</strong> John Doe</p>
+    <p><strong>Phone:</strong> +1 234 567 890</p>
+    <p><strong>Email:</strong> john.doe@example.com</p>
+    <p><strong>Address:</strong> 123 Eco Street, Green City</p>
+</div>
+ <!-- Pickup History Section -->
+<div class="pickup-history">
+<h4>Pickup History</h4>
+<div class="history-container">
+    <!-- Pickup history items will be dynamically added here -->
+</div>
+</div>
+<button class="logout-btn">Logout</button>
+</div>
+</div>
+</div>
+ <!-- Features Section -->
+ <section class="features fade-in" id="features">
+  <h2>Our Services</h2>
+  <div class="feature-grid">
+      <!-- Pickup Card -->
+      <div class="feature-card popup-trigger" data-popup="pickup-form">
+          <i class="fas fa-recycle"></i>
+          <h3>Pickup</h3>
+          <p>Effortlessly segregate and recycle waste with our intuitive tools.</p>
+      </div>
+      <!-- Waste Reporting Card -->
+      <div class="feature-card popup-trigger" data-popup="report-form">
+          <i class="fas fa-leaf"></i>
+          <h3>Waste Reporting</h3>
+          <p>Promote sustainable practices and reduce your carbon footprint.</p>
+      </div>
+      <div class="feature-card popup-trigger" data-popup="rental-form">
+        <i class="fas fa-leaf"></i>
+        <h3>Dumpster Rental</h3>
+        <p>A solution for clean city</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pickup Form Popup -->
+<div id="pickup-form" class="popup">
+  <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>Schedule Pickup</h2>
+      <form id="pickup-form-content">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="address">Address (for pickup):</label>
+          <input type="text" id="address" name="address" required>
+
+          <!-- Waste Items Container -->
+          <div id="waste-items-container">
+              <div class="waste-item">
+                  <label for="waste-type-0">Type of Waste:</label>
+                  <select id="waste-type-0" name="waste-type[]">
+                      <option value="plastic">Plastic</option>
+                      <option value="paper">Paper</option>
+                      <option value="metal">Metal</option>
+                      <option value="glass">Glass</option>
+                  </select>
+
+                  <label for="quantity-0">Quantity (in kg):</label>
+                  <input type="number" id="quantity-0" name="quantity[]" min="1" required>
+              </div>
+          </div>
+
+          <!-- Add More Waste Button -->
+          <button type="button" id="add-waste-item" class="add-more-btn">+ Add Another Waste Item</button>
+
+          <label for="pickup-date">Pickup Date:</label>
+          <input type="date" id="pickup-date" name="pickup-date" required>
+
+          <label for="pickup-time">Pickup Time:</label>
+          <select id="pickup-time" name="pickup-time" required>
+              <option value="" disabled selected>Select a time slot</option>
+              <option value="09:00 AM - 11:00 AM">09:00 AM - 11:00 AM</option>
+              <option value="11:00 AM - 01:00 PM">11:00 AM - 01:00 PM</option>
+              <option value="01:00 PM - 03:00 PM">01:00 PM - 03:00 PM</option>
+              <option value="03:00 PM - 05:00 PM">03:00 PM - 05:00 PM</option>
+              <option value="05:00 PM - 07:00 PM">05:00 PM - 07:00 PM</option>
+          </select>
+
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+</div>
+
+<!-- Waste Reporting Form Popup -->
+<div id="report-form" class="popup">
+  <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>Report Waste</h2>
+      <form id="report-form-content">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="4"></textarea>
+
+          <label for="severity">Severity Level:</label>
+          <select id="severity" name="severity">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+          </select>
+
+          <!-- Photo Upload Option -->
+          <label for="photo-upload">Upload Photo</label>
+          <input type="file" id="photo-upload" name="photo-upload" accept="image/*" required>
+
+          <button type="submit">Submit Report</button>
+      </form>
+  </div>
+</div>
+
+<!-- rental Form Popup -->
+<div id="rental-form" class="popup">
+  <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>Rental</h2>
+      <form id="rental-form-content">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+
+          <label for="description">Description Of Usage:</label>
+          <textarea id="description" name="description" rows="4" ></textarea>
+          <button type="submit">Submit </button>
+      </form>
+  </div>
+</div>
+
+    <!-- 4.2 SingleServic_view section  -->
+    <section class="SingleService_view">
+      <div class="container">
+        <div>
+          <div class="row">
+            <div class="col-lg-3 col-md-4">
+              <div>
+                <div class="w3-sidebar w3-bar-block w3-light-grey w3-card">
+                  <h4 class="w3-bar-item">Our Services</h4>
+                  <button class="w3-bar-item w3-button tablink w-100" onclick="openCity(event, 'London')">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h5>Domestic Waste Pickup</h5>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </button>
+                  <button class="w3-bar-item w3-button tablink w-100" onclick="openCity(event, 'Paris')">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h5>Medical Waste Pickup </h5>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </button>
+                  <button class="w3-bar-item w3-button tablink w-100" onclick="openCity(event, 'Tokyo')">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h5>Industries Waste Pickup </h5>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </button>
+                  <button class="w3-bar-item w3-button tablink w-100" onclick="openCity(event, 'Paris')">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h5>Office Waste Pickup </h5>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </button>
+                  <button class="w3-bar-item w3-button tablink w-100" onclick="openCity(event, 'Tokyo')">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h5>Roadside Waste Pickup </h5>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </button>
+                  <button class="w3-bar-item w3-button tablink w-100" onclick="openCity(event, 'Tokyo')">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h5>Park Waste Pickup</h5>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </button>
+                </div>
+             
+                <div class="d-flex flex-column gap-2 mt-5 ">
+                  <h4>Your Satisfaction is Our Priority</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur. Venenatis viverra nunc mattis a
+                    turpis magnis. </p>
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex align-items-center gap-4">
+                      <figure class="d-flex align-items-center justify-content-center">
+                        <img src="assets/images/icons/singleservice1.svg" alt="singleservice1">
+                      </figure>
+                      <a href="#">+123-4567-890</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                      <figure class="d-flex align-items-center justify-content-center">
+                        <img src="assets/images/icons/singleservice2.svg" alt="singleservice">
+                      </figure>
+                      <a href="#">xyz@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-8">
+              <div class="d-flex flex-column gap-1 ">
+                <h2>Overview</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Venenatis viverra nunc mattis a turpis
+                  magnis. Scelerisque
+                  fermentum nunc fringilla ullamcorper diam eget felis netus. Feugiat facilisis
+                  sed a neque. Urna fusce
+                  diam at at magna faucibus dui tincidunt. Habitant aliquam tincidunt at quis sit.
+                  Adipiscing et morbi
+                  sed tristique ligula. Massa risus sociis id neque. Turpis ornare libero nisi
+                  maecenas amet ullamcorper
+                  tortor aliquam. Venenatis vel neque mauris eu gravida. Blandit convallis
+                  tincidunt volutpat non.
+                  Porttitor eget sed adipiscing egestas sodales ornare lobortis est. Lectus
+                  porttitor nibh risus aliquam
+                  proin nullam id fames arcu. Pellentesque mauris orci pellentesque accumsan nulla
+                  scelerisque neque
+                  lacus. Neque laoreet est sodales mauris nisl consectetur. Molestie felis ornare
+                  leo faucibus ut in
+                  quis velit morbi. Egestas est quis enim lacinia fringilla egestas sollicitudin
+                  dui.
+                </p>
+                <p> Dictum egestas eget quis lobortis scelerisque condimentum. Amet tellus tempor
+                  urna pharetra amet
+                  pharetra adipiscing accumsan pellentesque. Id viverra vulputate diam bibendum
+                  diam mi felis fames sed.
+                  Ornare consequat sed nisl tempor lectus. Congue mattis fermentum volutpat
+                  pharetra vulputate quis.
+                </p>
+                <div class="position-relative">
+                  <figure class="pt-3">
+                    <img class="w-100" src="assets/images/index/singleservice1.png" alt="singlesecives2">
+                  </figure>
+                  <div class="Guide-video" data-bs-toggle="modal" data-bs-target="#staticBackdropVideo">
+                    <a class="video-play-button" href="#" id="playButton">
+                      <span class="fa-solid fa-play"></span>
+                    </a>
+                  </div>
+                </div>
+                <p class="pt-4">Lorem ipsum dolor sit amet consectetur. Venenatis viverra nunc
+                  mattis a turpis magnis. Scelerisque
+                  fermentum nunc fringilla ullamcorper diam eget felis netus. Feugiat facilisis
+                  sed a neque. Urna fusce
+                  diam at at magna faucibus dui tincidunt. Habitant aliquam tincidunt at quis sit.
+                  Adipiscing et morbi
+                  sed tristique ligula. Massa risus sociis id neque. Turpis ornare libero nisi
+                  maecenas amet ullamcorper
+                  tortor aliquam. Venenatis vel neque mauris eu gravida. Blandit convallis
+                  tincidunt volutpat non.
+                  Porttitor eget sed adipiscing egestas sodales ornare lobortis est. Lectus
+                  porttitor nibh risus aliquam
+                  proin nullam id fames arcu.
+                </p>
+                <h4>Key Benefits</h4>
+                <p>Lorem ipsum dolor sit amet consectetur. Venenatis viverra nunc mattis a turpis
+                  magnis. Scelerisque
+                  fermentum nunc fringilla ullamcorper diam eget felis netus. Feugiat facilisis
+                  sed a neque. Urna fusce
+                  diam at at magna faucibus dui tincidunt. Habitant aliquam tincidunt at quis sit.
+                  Adipiscing et morbi
+                  sed tristique ligula. Massa risus sociis id neque. Turpis ornare libero nis.
+                </p>
+                <div class="d-flex gap-5 pt-4">
+                  <figure>
+                    <img class="w-100" src="assets/images/index/singleservice2.png" alt="singlesecives2">
+                  </figure>
+                  <div class="d-flex flex-column justify-content-center gap-3">
+                    <div class="d-flex align-items-center gap-3 ">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <p>Lorem ipsum dolor sit amet consectetur Lacus. </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <p>Lorem ipsum dolor sit amet consectetur Lacus.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <p>Lorem ipsum dolor sit amet consectetur Lacus.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <p>Lorem ipsum dolor sit amet consectetur Lacus. </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <p>Lorem ipsum dolor sit amet consectetur Lacus. </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 ">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                      <p>Lorem ipsum dolor sit amet consectetur Lacus. </p>
+                    </div>
+                  </div>
+                </div>
+                <p class="pt-4">Lorem ipsum dolor sit amet consectetur. Venenatis viverra nunc
+                  mattis a turpis magnis. Scelerisque
+                  fermentum
+                  nunc fringilla ullamcorper.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdropVideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered h-100 my-0 mx-auto">
+          <div class="modal-content d-flex align-items-center justify-content-center border-0">
+            <div class="modal-body">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                  class="fa-solid fa-xmark"></i></button>
+              <iframe src="https://www.youtube.com/embed/u31qwQUeGuM?si=o1Nt3XrgyYRKwJ13" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End of 4.2 SingleServic_view section  -->
+   
+    <footer class="footer fade-in">
+      <p>&copy; 2025 Green Horizon. All rights reserved.</p>
+  </footer>
+    <!--End of 1.14 footer section-->
+  </div>
+
+  <!-- bootstrap min javascript -->
+  <script src="assets/js/javascript-lib/bootstrap.min.js"></script>
+  <!-- j Query -->
+  <script src="assets/js/jquery.js"></script>
+  <!-- slick slider js -->
+  <script src="assets/js/slick.min.js"></script>
+  <!-- main javascript -->
+  <script src="assets/js/custom.js"></script>
+  <!-- animation from javascript -->
+  <script src="assets/js/aos.js"></script>
+   <!-- Flatpickr JS -->
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1500,
+    });
+  </script>
+
+</body>
+
+</html>
